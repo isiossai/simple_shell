@@ -1,8 +1,16 @@
+#ifndef _MAIN_
+#define _MAIN_
+
 #include <sys/wait.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <limits.h>
 
 /*
   Function Declarations for builtin shell commands:
@@ -251,4 +259,3 @@ int main(int argc, char **argv)
 
   return EXIT_SUCCESS;
 }
-
