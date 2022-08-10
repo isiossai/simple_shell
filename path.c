@@ -100,12 +100,12 @@ void check_for_path(vars_t *vars)
 				new_exit(vars);
 			}
 		}
-		 (path == NULL || path_tokens[i] == NULL);
+		if (path == NULL || path_tokens[i] == NULL)
 		{
 			print_error(vars, ": not found\n");
 			vars->status = 127;
 		}
-		char **path_tokens;
+		free(path_tokens);
 	}
 	if (r == 1)
 		new_exit(vars);
