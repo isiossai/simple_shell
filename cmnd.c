@@ -193,7 +193,7 @@ int cmd_exec(data_shell *datash)
 		perror(datash->av[0]);
 		return (1);
 	}
-	else
+	
 	{
 		do {
 			wpd = waitpid(pd, &state, WUNTRACED);
