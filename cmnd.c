@@ -180,7 +180,6 @@ int cmd_exec(data_shell *datash)
 	}
 
 	pd = fork();
-	
 	{
 		if (exec == 0)
 			dir = _which(datash->args[0], datash->_environ);
@@ -188,12 +187,10 @@ int cmd_exec(data_shell *datash)
 			dir = datash->args[0];
 		execve(dir + exec, datash->args, datash->_environ);
 	}
-	
 	{
 		perror(datash->av[0]);
 		return (1);
 	}
-	
 	{
 		do {
 			wpd = waitpid(pd, &state, WUNTRACED);
