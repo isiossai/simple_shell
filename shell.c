@@ -16,12 +16,10 @@ int main(int ac __attribute__((unused)), char *av[], char *envp[])
 	signal(SIGINT, SIG_IGN);
 	while (1)
 	{
-		if (isatty(STDIN_FILENO))
-			printf("~$ ");
+		printdollar();
 		if (getline(&buffer, &bufsize, stdin) == -1)
 			break;
-		if (buffer == NULL)
-			exit(0);
+		_enderfunction(buffer);
 		av = parse_input_string(buffer);
 		if (!av[0])
 		{
