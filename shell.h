@@ -17,4 +17,6 @@ char *_strncat(char *dest, char *src, int n);
 int string_length(char *pointer);
 char *_strcat(char *dest, char *src);
 char *_strchr(char *s, char c);
+void _enderfunction(char *buffvar);
+void printdollar(void);
 #endif
