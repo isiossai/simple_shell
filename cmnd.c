@@ -180,7 +180,7 @@ int cmd_exec(data_shell *datash)
 	}
 
 	pd = fork();
-	if (pd == 0)
+	
 	{
 		if (exec == 0)
 			dir = _which(datash->args[0], datash->_environ);
