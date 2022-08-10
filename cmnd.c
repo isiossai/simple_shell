@@ -188,7 +188,7 @@ int cmd_exec(data_shell *datash)
 			dir = datash->args[0];
 		execve(dir + exec, datash->args, datash->_environ);
 	}
-	else if (pd < 0)
+	
 	{
 		perror(datash->av[0]);
 		return (1);
